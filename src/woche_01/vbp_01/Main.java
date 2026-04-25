@@ -2,20 +2,25 @@ package woche_01.vbp_01;
 
 public class Main {
     public static void main(String[] args) {
-        Matrix m1 = new Matrix(2, 2);
-        int[][] m1_data = {{1, 3},
-                           {5, 7}};
-        m1.setData(m1_data);
+        double[][] a = {
+                {1.0, 3.0},
+                {5.0, 7.0}
+        };
 
-        Matrix m2 = new Matrix(2, 2);
-        int[][] m2_data = {{2, 4},
-                           {6, 8}};
-        m2.setData(m2_data);
+        double[][] b = {
+                {2.0, 4.0},
+                {6.0, 8.0}
+        };
 
-        Matrix result = m1.multiply(m2);
+        double[][] result = Matrix.multiply(a, b);
 
         if (result != null) {
-            result.print();
+            for (int i = 0; i < result.length; i++) {
+                for (int j = 0; j < result[i].length; j++) {
+                    System.out.print(result[i][j] + " ");
+                }
+                System.out.println();
+            }
         } else {
             System.out.println("Multiplikation nicht möglich.");
         }
