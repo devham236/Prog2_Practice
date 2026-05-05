@@ -8,10 +8,6 @@ public class PasswordGenerator {
     }
 
     public static String generatePassword(String str){
-        if(str == null || str.isEmpty()) {
-            return "";
-        }
-
         String password = "";
         int count = 0;
         boolean nextCharIsFirstLetter = true;
@@ -27,14 +23,12 @@ public class PasswordGenerator {
                 password += c;
                 nextCharIsFirstLetter = false;
             }
-
             else if(c == ' '){
                 nextCharIsFirstLetter = true;
             }
         }
 
         password += Integer.toString(count);
-
         return password;
     }
 
