@@ -10,15 +10,20 @@ public class Muster {
         input = scanner.nextInt();
 
         for (int i = 1; i <= input; i++) {
+
+
+            for (int k = 0; k < i; k++) {
+                System.out.print("*");
+            }
+
             for (int j = 0; j < input - i; j++) {
                 System.out.print(" ");
             }
 
-            for (int k = 0; k < i; k++) {
-                System.out.print("* ");
-            }
-
             System.out.println();
         }
+
+        scanner.close();
+
     }
 }
