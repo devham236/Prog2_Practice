@@ -8,23 +8,21 @@ public class Muster {
         System.out.print("Enter number: ");
         int input = scanner.nextInt();
 
-        for (int i = 1; i <= input; i++){
-            for(int j = 0; j < input - i; j++){
+        for(int i = 1; i <= input; i++){
+            for (int j = 0; j < input - i; j++) {
                 System.out.print(" ");
             }
 
-            for (int k = 0; k < i; k++){
-                System.out.print("* ");
+            for(int k = 0; k < 2 * i - 1; k++){
+                System.out.print("*");
             }
 
             System.out.println();
         }
 
-        for(int j = 0; j < input - 1; j++){
+        for(int l = 0; l < input - 1; l++){
             System.out.print(" ");
         }
         System.out.println("*");
-
-
     }
 }
