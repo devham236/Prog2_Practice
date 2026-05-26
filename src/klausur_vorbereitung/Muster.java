@@ -18,18 +18,12 @@ public class Muster {
             }
 
             System.out.println();
-
-            if(i == input){
-                for(int j = 0; j < i; j++){
-                    System.out.print(" ");
-
-                    if(j == input / 2){
-                        System.out.print("S");
-                    }
-                }
-                System.out.println();
-            }
         }
+
+        for(int j = 0; j < input - 1; j++){
+            System.out.print(" ");
+        }
+        System.out.println("*");
 
 
     }
