@@ -21,14 +21,15 @@ public class PasswordGenerator {
             }
 
             if(c != ' ' && nextCharIsFirstLetter){
+                sb.append(c);
                 nextCharIsFirstLetter = false;
-                sb.append(str.charAt(i));
             }
 
             if(c == ' '){
                 nextCharIsFirstLetter = true;
             }
         }
+
         sb.append(count);
         return sb.toString();
     }
