@@ -1,35 +1,36 @@
 package klausur_vorbereitung;
+import java.lang.StringBuilder;
 
 public class PasswordGenerator {
     public static void main(String[] args) {
-        String test = "hallo ich bin  Hamza";
+        String test = "Hallo ich bin Hamza"; //IbEs2
 
         System.out.println(generatePassword(test));
     }
 
     public static String generatePassword(String str){
-        String password = "";
+        StringBuilder sb = new StringBuilder();
         int count = 0;
         boolean nextCharIsFirstLetter = true;
 
-        for (int i = 0; i < str.length(); i++) {
+        for(int i = 0; i < str.length(); i++){
             char c = str.charAt(i);
 
-            if (Character.isUpperCase(c)){
+            if(Character.isUpperCase(c)){
                 count++;
             }
 
             if(c != ' ' && nextCharIsFirstLetter){
-                password += c;
                 nextCharIsFirstLetter = false;
+                sb.append(str.charAt(i));
             }
-            else if(c == ' '){
+
+            if(c == ' '){
                 nextCharIsFirstLetter = true;
             }
         }
-
-        password += Integer.toString(count);
-        return password;
+        sb.append(count);
+        return sb.toString();
     }
 
 }
