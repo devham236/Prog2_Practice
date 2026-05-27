@@ -8,14 +8,16 @@ public class ArrayQueue {
 
                 for (int i = 1; i < args.length; i++) {
                     int value = Integer.parseInt(args[i]);
-                    System.out.println(String.format("Contains: %d %b", value, contains(queue, value)));
-                    System.out.println(String.format("Added: %d %b", value, push(queue, value)));
-                    System.out.println(String.format("Contains: %d %b", value, contains(queue, value)));
+                    push(queue, value);
+                }
+                printQueue(queue);
+                for (int i = 0; i < 3; i++) {
+                    System.out.println(String.format("Pop: %d", pop(queue)));
                 }
                 printQueue(queue);
 
             } catch (NumberFormatException e) {
-                System.out.println(String.format("Error Parsing %s", args[0]));
+                System.out.println(String.format("Error Parsing"));
             }
             return;
         }
@@ -27,6 +29,10 @@ public class ArrayQueue {
         System.out.println(String.format("Element %d ist vorhanden? %b", 10, contains(queue, 10)));
         push(queue, 20);
         push(queue, 30);
+        printQueue(queue);
+        for (int i = 0; i < 4; i++) {
+            System.out.println(String.format("Entferntes Element: %d", pop(queue)));
+        }
         printQueue(queue);
     }
 
@@ -47,29 +53,35 @@ public class ArrayQueue {
         return queue;
     }
 
-    //TODO fügen Sie hier die geforderten Methoden ein
     public static boolean contains(int[] queue, int value) {
         for (int i = 0; i < queue.length; i++) {
-            if(queue[i] == value){
-                return true;
-            }
+            if (queue[i] == value) return true;
+            if (queue[i] == -1) return false;
         }
-
         return false;
     }
 
-    public static boolean push(int[] queue, int value){
-        if(contains(queue, value)){
-            return false;
-        }
-
+    public static boolean push(int[] queue, int value) {
+        if (contains(queue, value)) return false;
         for (int i = 0; i < queue.length; i++) {
-            if(queue[i] == -1){
+            if (queue[i] == -1) {
                 queue[i] = value;
                 return true;
             }
         }
-
         return false;
+    }
+
+    //TODO fügen Sie hier die geforderte Methode ein
+    public static int pop(int[] queue){
+        int result = queue[0];
+
+        for (int i = 1; i < queue.length; i++){
+            queue[i-1] = queue[i];
+        }
+
+        queue[queue.length - 1] = -1;
+
+        return result;
     }
 }
