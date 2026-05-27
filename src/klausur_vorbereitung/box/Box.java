@@ -1,21 +1,21 @@
-package klausur_vorbereitung.box;
+ package klausur_vorbereitung.box;
 
 public class Box implements Comparable<Box>{
-    String content;
+    String name;
     Integer weight;
 
-    public Box(String c, int w){
-        this.content = c;
+    public Box(String n, int w){
+        this.name = n;
         this.weight = w;
     }
 
     @Override
-    public int compareTo(Box otherBox){
-        return Integer.compare(this.weight, otherBox.weight);
+    public int compareTo(Box other){
+        return Integer.compare(this.weight, other.weight);
     }
 
     @Override
     public String toString(){
-        return "Box mit Content Type %s wiegt %d kg".formatted(this.content, this.weight);
+        return "Box %s, weighs %d kg.".formatted(this.name, this.weight);
     }
 }
