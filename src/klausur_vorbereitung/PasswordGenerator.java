@@ -1,15 +1,25 @@
 package klausur_vorbereitung;
 
+import java.util.Scanner;
 import java.lang.StringBuilder;
 
 public class PasswordGenerator{
-    public static void main(String[] args){
-        String input = "Hallo mein Name ist Hamza";
-        StringBuilder str = new StringBuilder();
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Satz: ");
+        String str = scanner.nextLine();
+
+        System.out.println(generatePassword(str));
+        scanner.close();
+    }
+
+    public static String generatePassword(String input){
+        StringBuilder sb = new StringBuilder();
+
         int count = 0;
         boolean nextCharIsFirst = true;
 
-        for(int i = 0; i < input.length(); i++){
+        for (int i = 0; i < input.length(); i++) {
             char c = input.charAt(i);
 
             if(Character.isUpperCase(c)){
@@ -17,7 +27,7 @@ public class PasswordGenerator{
             }
 
             if(c != ' ' && nextCharIsFirst){
-                str.append(c);
+                sb.append(c);
                 nextCharIsFirst = false;
             }
 
@@ -26,8 +36,7 @@ public class PasswordGenerator{
             }
         }
 
-        str.append(count);
-
-        System.out.println(str.toString());
+        sb.append(count);
+        return sb.toString();
     }
 }
