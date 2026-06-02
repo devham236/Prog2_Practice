@@ -8,4 +8,9 @@ public class Rational{
         this.zaehler = z;
         this.nenner = n;
     }
+
+    @Override
+    public String toString(){
+        return String.format("(%d/%d)", zaehler, nenner);
+    }
 }
