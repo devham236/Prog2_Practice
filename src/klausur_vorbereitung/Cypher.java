@@ -16,22 +16,32 @@ public class Cypher {
 
         System.out.print("Schlüssel: ");
         int key = scanner.nextInt();
+        key = key % 26;
 
 
         for(int i = 0; i < str.length(); i++){
             int newChar = str.charAt(i) - key;
-            System.out.printf("current char: %c new char: %c\n", str.charAt(i), (char) newChar);
+            char curr = str.charAt(i);
 
-            if(newChar < 97 && newChar > 90){
-                int rest = 97 - newChar;
-                str.setCharAt(i, (char) (122 - (rest - 1)));
+            if(curr >= 97 && curr <= 122){
+                if(newChar < 97){
+                    int rest = 97 - newChar;
+                    str.setCharAt(i, (char) (122 - (rest - 1)));
+                }
+                else{
+                    str.setCharAt(i, (char) newChar);
+                }
             }
-            else if(newChar < 65){
-                int rest = 65 - newChar;
-                str.setCharAt(i, (char) (90 - (rest - 1)));
+            else if(curr >= 60 && curr <= 90){
+                if (newChar < 65) {
+                    int rest = 65 - newChar;
+                    str.setCharAt(i, (char) (90 - (rest - 1)));
+                } else {
+                    str.setCharAt(i, (char) newChar);
+                }
             }
             else{
-                str.setCharAt(i, (char) newChar);
+                str.setCharAt(i, curr);
             }
         }
 
