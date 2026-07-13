@@ -1,14 +1,15 @@
 package klausur_vorbereitung.textAnalyser;
 
-import java.util.Vector;
+import java.util.ArrayList;
+import java.util.List;
 
 public class WordArray implements Comparable<WordArray>{
-    public Vector<String> values;
-    Integer charCount;
+    public List<String> values;
+    public Integer charCount;
 
     public WordArray(Integer c){
         this.charCount = c;
-        this.values = new Vector<>();
+        this.values = new ArrayList<>();
     }
 
     public int getCount(){
@@ -22,11 +23,10 @@ public class WordArray implements Comparable<WordArray>{
     @Override
     public String toString(){
         StringBuilder sb = new StringBuilder();
-        sb.append(String.format("%d: ", this.charCount));
 
-        for(String v : values){
-            sb.append(String.format("%s ", v));
-        }
+        sb.append(this.charCount);
+        sb.append(": ");
+        sb.append(String.join(" ", this.values));
 
         return sb.toString();
     }

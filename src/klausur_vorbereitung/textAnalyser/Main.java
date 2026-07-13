@@ -5,31 +5,48 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        List<WordArray> list = new ArrayList<>();
 
-        System.out.print("Eingabe: ");
-        String input = scanner.nextLine();
+        while (true) {
+            System.out.print("Eingabe: ");
+            String input = scanner.nextLine();
 
-        String[] arr = input.split(" ");
+            List<WordArray> list = new ArrayList<>();
+            String[] arr = input.split(" ");
 
-        for (String s : arr){
-            Optional<WordArray> result = list.stream().filter(w -> w.charCount == s.length()).findFirst();
+            for (String s : arr) {
+                WordArray match = null;
+                for (WordArray w : list) {
+                    if (w.getCount() == s.length()) {
+                        match = w;
+                        break;
+                    }
+                }
 
-            if(result.isPresent()){
-                WordArray wordArray = result.get();
-                wordArray.addValue(s);
-            } else if (!result.isPresent()) {
-                WordArray newWordArray = new WordArray(s.length());
-                newWordArray.addValue(s);
-                list.add(newWordArray);
+                if (match != null) {
+                    match.addValue(s);
+                } else {
+                    WordArray newWordArray = new WordArray(s.length());
+                    newWordArray.addValue(s);
+                    list.add(newWordArray);
+                }
+            }
+
+            Collections.sort(list);
+
+            System.out.println("\nAusgabe:");
+            for (WordArray w : list) {
+                System.out.println(w.toString());
+            }
+
+            System.out.println("\nWollen Sie noch einen Text analysieren (j/n)?");
+            String response = scanner.nextLine();
+
+            if (response.equals("n")) {
+                break;
             }
         }
 
-        Collections.sort(list);
-
-        for(WordArray w : list){
-            System.out.println(w.toString());
-        }
+        scanner.close();
 
     }
 }
