@@ -1,4 +1,4 @@
-package klausur_vorbereitung.hashCode;
+package klausur_vorbereitung.rationalHashCode;
 
 import java.util.Objects;
 

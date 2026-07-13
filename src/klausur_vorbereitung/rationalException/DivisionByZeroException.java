@@ -1,4 +1,4 @@
-package klausur_vorbereitung.rational;
+package klausur_vorbereitung.rationalException;
 
 public class DivisionByZeroException extends RuntimeException{
     public DivisionByZeroException(String s){

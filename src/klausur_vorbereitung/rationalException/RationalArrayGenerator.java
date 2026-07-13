@@ -1,4 +1,4 @@
-package klausur_vorbereitung.rational;
+package klausur_vorbereitung.rationalException;
 
 import java.util.Random;
 

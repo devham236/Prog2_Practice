@@ -1,4 +1,4 @@
-package klausur_vorbereitung.rational;
+package klausur_vorbereitung.rationalException;
 
 public class Main {
     public static void main(String[] args) {

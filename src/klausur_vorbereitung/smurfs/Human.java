@@ -1,7 +1,7 @@
 package klausur_vorbereitung.smurfs;
 
 public class Human implements TwoLegged{
-    private String name;
+    String name;
 
     @Override
     public String getName(){
@@ -9,8 +9,8 @@ public class Human implements TwoLegged{
     }
 
     @Override
-    public void setName(String str){
-        this.name = str;
+    public void setName(String s){
+        this.name = s;
     }
 
     @Override
