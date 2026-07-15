@@ -1,13 +1,13 @@
 package klausur_vorbereitung.textVerwürfeln;
 
 public class SingleChar implements Comparable<SingleChar>{
-    public char value;
+    private char value;
 
     public SingleChar(char c){
         this.value = c;
     }
 
-    public char getValue(){
+    public char getValue() {
         return this.value;
     }
 

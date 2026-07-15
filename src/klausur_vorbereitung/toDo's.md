@@ -2,7 +2,7 @@
 
 * [x] Box
 * [x] Textanalyser
-* [ ] Wörterverwürfeln
+* [x] Wörterverwürfeln
 * [ ] Polynom
 * [ ] RatFactory
 * [ ] Quersumme
