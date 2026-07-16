@@ -1,4 +1,4 @@
-package klausur_vorbereitung.rationalHashCode;
+package klausur_vorbereitung.rationalRange;
 
 public class Main {
     public static void main(String[] args) {

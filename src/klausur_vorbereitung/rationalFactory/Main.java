@@ -1,37 +1,34 @@
 package klausur_vorbereitung.rationalFactory;
 
-public class Main{
+public class Main {
     public static void main(String[] args) {
         try{
-            Rational[] arr1 = rationalFactory(5);
-            System.out.println("Aufruf mit rationalArrayFactory(5):");
-            for (int i = 0; i < arr1.length; i++) {
-                System.out.println(arr1[i]);
+            System.out.println("Aufruf mit RationalFactory(5):");
+            Rational[] ratArr = rationalFactory(0);
+
+            for(Rational rat : ratArr){
+                System.out.println(rat.toString());
             }
-
-            System.out.println();
-
-            System.out.println("Aufruf mit rationalArrayFactory(0):");
-            Rational[] arr2 = rationalFactory(0);
-
         }
-        catch (DivisionByZero e){
+        catch(Exception e){
             e.printStackTrace();
         }
     }
 
-    public static Rational[] rationalFactory(int n) throws DivisionByZero{
-        Rational[] arr = new Rational[5];
-
+    public static Rational[] rationalFactory(Integer n) throws DivisionByZero{
         if(n == 0){
             throw new DivisionByZero();
         }
         else{
-            for (int i = 0; i < arr.length; i++) {
-                arr[i] = new Rational(i, n);
-            }
-        }
+            Rational[] arr = new Rational[n];
 
-        return arr;
+            for (int i = 0, j = 1; i < n; i++) {
+                Rational rat = new Rational(j, n);
+                j++;
+                arr[i] = rat;
+            }
+
+            return arr;
+        }
     }
 }

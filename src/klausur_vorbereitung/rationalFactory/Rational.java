@@ -1,16 +1,16 @@
 package klausur_vorbereitung.rationalFactory;
 
-public class Rational{
-    Integer Nominator;
-    Integer Denominator;
+public class Rational {
+    public Integer nominator;
+    public Integer denominator;
 
     public Rational(int n, int d){
-        this.Nominator = n;
-        this.Denominator = d;
+        this.nominator = n;
+        this.denominator = d;
     }
 
     @Override
     public String toString(){
-        return String.format("%d/%d", Nominator, Denominator);
+        return String.format("%d/%d", nominator, denominator);
     }
 }

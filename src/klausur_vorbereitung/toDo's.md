@@ -4,6 +4,7 @@
 * [x] Textanalyser
 * [x] Wörterverwürfeln
 * [x] Polynom
-* [ ] RatFactory
+* [x] RatFactory
+* [ ] RatRange
 * [ ] Quersumme
 * [ ] Smurf
