@@ -5,6 +5,6 @@
 * [x] Wörterverwürfeln
 * [x] Polynom
 * [x] RatFactory
-* [ ] RatRange
+* [x] RatRange
 * [ ] Quersumme
 * [ ] Smurf
