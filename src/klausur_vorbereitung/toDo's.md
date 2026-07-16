@@ -6,5 +6,5 @@
 * [x] Polynom
 * [x] RatFactory
 * [x] RatRange
-* [ ] Quersumme
+* [x] Quersumme
 * [ ] Smurf

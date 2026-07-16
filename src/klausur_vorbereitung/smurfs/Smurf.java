@@ -1,16 +1,16 @@
 package klausur_vorbereitung.smurfs;
 
 public class Smurf implements TwoLegged{
-    String name;
+    private String name;
 
     @Override
     public String getName(){
-        return this.name;
+        return name;
     }
 
     @Override
-    public void setName(String s){
-        this.name = s;
+    public void setName(String n) {
+        this.name = n;
     }
 
     @Override
