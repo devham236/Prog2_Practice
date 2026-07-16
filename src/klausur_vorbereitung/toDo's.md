@@ -3,7 +3,7 @@
 * [x] Box
 * [x] Textanalyser
 * [x] Wörterverwürfeln
-* [ ] Polynom
+* [x] Polynom
 * [ ] RatFactory
 * [ ] Quersumme
 * [ ] Smurf
