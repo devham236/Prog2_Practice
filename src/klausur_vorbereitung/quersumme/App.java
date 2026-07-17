@@ -4,17 +4,24 @@ import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) {
+        System.out.println("Aufgabe 2 von Hamza Mirza:");
+
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Eingabe:");
+        System.out.println("\nEingabe:");
         String input = scanner.nextLine();
 
-        String[] arr = input.split(" ");
+        String[] strArr = input.split(" ");
 
-        for (int i = 0; i < arr.length; i++) {
-            int num = Integer.parseInt(arr[i]);
+        System.out.println("\nAusgabe:");
+        for(int i = 0; i < strArr.length; i++){
+            int num = Integer.parseInt(strArr[i]);
             int result = NumberAnalyser.analyse(num);
-            System.out.println(String.format("%d hat Quersumme: %d", num, result));
+
+            System.out.println(String.format("%d hat die Quersumme %d", num, result));
         }
+
+        System.out.println("\nAufgabe 2 Ende");
+
     }
 }
