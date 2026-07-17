@@ -1,8 +1,8 @@
-package klausur_vorbereitung.rationalFactory;
+package klausur_vorbereitung.ratFactory;
 
-public class Rational {
-    public Integer nominator;
-    public Integer denominator;
+public class Rational{
+    private Integer nominator;
+    private Integer denominator;
 
     public Rational(int n, int d){
         this.nominator = n;
