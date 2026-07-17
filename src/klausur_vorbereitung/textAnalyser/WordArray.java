@@ -4,10 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class WordArray implements Comparable<WordArray>{
-    public List<String> values;
-    public Integer charCount;
+    private List<String> values;
+    private Integer charCount;
 
-    public WordArray(Integer c){
+    public WordArray(int c){
         this.charCount = c;
         this.values = new ArrayList<>();
     }
@@ -26,12 +26,13 @@ public class WordArray implements Comparable<WordArray>{
 
         sb.append(this.charCount);
         sb.append(": ");
-        sb.append(String.join(" ", this.values));
+        sb.append(String.join(" ", values));
 
         return sb.toString();
     }
 
+    @Override
     public int compareTo(WordArray other){
-        return Integer.compare(this.charCount, other.charCount);
+        return Integer.compare(charCount, other.charCount);
     }
 }
