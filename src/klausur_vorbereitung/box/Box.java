@@ -11,7 +11,7 @@ public class Box implements Comparable<Box>{
 
     @Override
     public String toString(){
-        return String.format("Box mit Content Type %s wiegt %dkg.", content, weight);
+        return String.format("Box mit Content Type %s wiegt %d kg.", content, weight);
     }
 
     @Override
