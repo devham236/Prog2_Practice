@@ -1,4 +1,4 @@
-package klausur_vorbereitung.textVerwürfeln;
+package klausur_vorbereitung.wörter_verwürfeln;
 
 public class SingleChar implements Comparable<SingleChar>{
     private char value;
@@ -7,12 +7,12 @@ public class SingleChar implements Comparable<SingleChar>{
         this.value = c;
     }
 
-    public char getValue() {
+    public char getValue(){
         return this.value;
     }
 
     @Override
     public int compareTo(SingleChar other){
-        return Character.compare(this.value, other.value);
+        return Character.compare(value, other.value);
     }
 }
