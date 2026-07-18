@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Main{
     public static void main(String[] args){
-        System.out.println("Aufgabe 2 von Hamza Mirza, Start:");
+        System.out.println("Aufgabe 1 von Hamza Mirza, Start:");
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("\nWie viele Funktionswerte sollen berechnet werden?");
@@ -17,6 +17,9 @@ public class Main{
         System.out.println("\nEvaluate Function f(x) = x*x*x + 5*x");
         p = (double x) -> x*x*x + 5*x;
         eval(p, input);
+
+        scanner.close();
+        System.out.println("\nAufgabe 1 Ende.");
     }
 
     public static void eval(Polynom p, int count){
@@ -26,5 +29,4 @@ public class Main{
             System.out.println(String.format("f(%.1f) = %.1f", argument, result));
         }
     }
-
 }
