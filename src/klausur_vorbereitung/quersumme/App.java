@@ -2,13 +2,12 @@ package klausur_vorbereitung.quersumme;
 
 import java.util.Scanner;
 
-public class App {
-    public static void main(String[] args) {
-        System.out.println("Aufgabe 2 von Hamza Mirza:");
-
+public class App{
+    public static void main(String[] args){
+        System.out.println("Aufgabe 1 von Hamza Mirza, Start:");
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("\nEingabe:");
+        System.out.println("\nEingabe per Tastatur:");
         String input = scanner.nextLine();
 
         String[] strArr = input.split(" ");
@@ -21,7 +20,7 @@ public class App {
             System.out.println(String.format("%d hat die Quersumme %d", num, result));
         }
 
-        System.out.println("\nAufgabe 2 Ende");
-
+        scanner.close();
+        System.out.println("\nAufgabe 1 Ende.");
     }
 }

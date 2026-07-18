@@ -1,6 +1,6 @@
 package klausur_vorbereitung.ratRange;
 
-public class Rational {
+public class Rational{
     private Integer nominator;
     private Integer denominator;
 
@@ -18,7 +18,7 @@ public class Rational {
         return nominator.equals(other.nominator) && denominator.equals(other.denominator);
     }
 
-    public int hashCode(){
+    public int hashcode(){
         return nominator + denominator;
     }
 }
