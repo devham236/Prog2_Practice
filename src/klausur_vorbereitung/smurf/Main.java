@@ -1,9 +1,7 @@
 package klausur_vorbereitung.smurf;
 
-public class Main{
-    public static void main(String[] args){
-        System.out.println("Aufgabe 2 von Hamza Mirza, Start:");
-
+public class Main {
+    public static void main(String[] args) {
         Human h1 = new Human();
         h1.setName("Erwin");
         Human h2 = new Human();
@@ -28,11 +26,9 @@ public class Main{
             System.out.println(h.getName());
         }
 
-        System.out.println("\nBicycleclub:");
+        System.out.println("\nBicycleClub:");
         for(TwoLegged t : bicycleClub){
             System.out.println(t.getName());
         }
-
-        System.out.println("\nAufgabe 2 Ende.");
     }
 }

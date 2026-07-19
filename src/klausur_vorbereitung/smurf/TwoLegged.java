@@ -1,6 +1,6 @@
 package klausur_vorbereitung.smurf;
 
-public interface TwoLegged{
+public interface TwoLegged {
     String getName();
-    void setName(String n);
+    void setName(String s);
 }
