@@ -7,12 +7,11 @@ public class SingleChar implements Comparable<SingleChar>{
         this.value = c;
     }
 
-    public char getChar(){
+    public char getValue(){
         return this.value;
     }
 
-    @Override
     public int compareTo(SingleChar other){
-        return Character.compare(value, other.value);
+        return Character.compare(this.value, other.value);
     }
 }
