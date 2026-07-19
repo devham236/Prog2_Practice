@@ -1,33 +1,30 @@
-package klausur_vorbereitung.textAnalyser;
+package klausur_vorbereitung.textAnalyse;
 
-import java.util.List;
 import java.util.ArrayList;
-import java.lang.StringBuilder;
+import java.util.List;
 
 public class WordArray implements Comparable<WordArray>{
-    private List<String> values;
     private Integer charCount;
+    private List<String> values;
 
     public WordArray(Integer c){
         this.charCount = c;
         this.values = new ArrayList<>();
     }
 
-    public void addValue(String s){
-        values.add(s);
-    }
-
     public int getCharCount(){
         return this.charCount;
     }
 
-    @Override
+    public void addValue(String s){
+        this.values.add(s);
+    }
+
     public String toString(){
         StringBuilder sb = new StringBuilder();
 
-        sb.append(charCount);
+        sb.append(getCharCount());
         sb.append(": ");
-
         for(String s : values){
             sb.append(String.format("%s ", s));
         }
@@ -35,7 +32,6 @@ public class WordArray implements Comparable<WordArray>{
         return sb.toString();
     }
 
-    @Override
     public int compareTo(WordArray other){
         return Integer.compare(charCount, other.charCount);
     }

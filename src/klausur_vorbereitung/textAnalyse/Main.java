@@ -1,17 +1,16 @@
-package klausur_vorbereitung.textAnalyser;
+package klausur_vorbereitung.textAnalyse;
 
-import java.util.Scanner;
-import java.util.List;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
+import java.util.Scanner;
 
-public class Main{
-    public static void main(String[] args){
-        System.out.println("Aufgabe 2 von Hamza Mirza, Start:");
+public class Main {
+    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
         while(true){
-            System.out.println("\nWie lautet ihre Eingabe?");
+            System.out.println("Eingabe:");
             String input = scanner.nextLine();
 
             String[] strArr = input.split(" ");
@@ -21,7 +20,7 @@ public class Main{
                 WordArray match = null;
 
                 for(WordArray w : list){
-                    if(s.length() == w.getCharCount()){
+                    if(w.getCharCount() == s.length()){
                         match = w;
                         break;
                     }
@@ -30,28 +29,28 @@ public class Main{
                 if(match != null){
                     match.addValue(s);
                 }
-                else{
-                    WordArray newWordArray = new WordArray(s.length());
-                    newWordArray.addValue(s);
-                    list.add(newWordArray);
+                else {
+                    WordArray newWordArr = new WordArray(s.length());
+                    newWordArr.addValue(s);
+                    list.add(newWordArr);
                 }
             }
 
             Collections.sort(list);
-            System.out.println("\nAusgabe:");
-            for(WordArray w : list){
+
+            System.out.println("\nAusgabe");
+            for (WordArray w : list){
                 System.out.println(w.toString());
             }
 
-            System.out.println("\nWollen Sie noch einen Text analysieren (j/n)?");
+            System.out.println("Nochmal? (j/n)");
             String retry = scanner.nextLine();
 
             if(retry.equals("n")){
                 break;
             }
-
         }
+
         scanner.close();
-        System.out.println("\nAufgabe 2 Ende");
     }
 }
