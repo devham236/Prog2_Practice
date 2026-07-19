@@ -1,15 +1,14 @@
 package klausur_vorbereitung.ratRange;
 
-public class Rational{
+public class Rational {
     private Integer nominator;
     private Integer denominator;
 
-    public Rational(int n, int d){
+    public Rational(Integer n, Integer d){
         this.nominator = n;
         this.denominator = d;
     }
 
-    @Override
     public String toString(){
         return String.format("%d/%d", nominator, denominator);
     }

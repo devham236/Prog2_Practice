@@ -1,7 +1,6 @@
 package klausur_vorbereitung.ratRange;
 
-
-public class RatRange{
+public class RatRange {
     private Rational start;
     private Rational end;
 
@@ -11,10 +10,10 @@ public class RatRange{
     }
 
     public String toString(){
-        return String.format("[%s, %s]", start.toString(), end.toString());
+        return String.format("[%s; %s]", start.toString(), end.toString());
     }
 
     public boolean equals(RatRange other){
-        return start.equals(other.start) && end.equals(other.end);
+        return start.equals(other.start) && end.equals((other.end));
     }
 }
