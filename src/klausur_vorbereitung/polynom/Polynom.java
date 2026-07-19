@@ -2,5 +2,5 @@ package klausur_vorbereitung.polynom;
 
 @FunctionalInterface
 public interface Polynom {
-    double evaluate(double x);
+    double evaluate(double d);
 }
